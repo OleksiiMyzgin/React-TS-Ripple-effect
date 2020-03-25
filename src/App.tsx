@@ -1,23 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import { Ripple } from './RippleButton'
+import { Button } from './RippleButton/styles'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+          <Button>
+            Learn React
+            <Ripple duration={850} color="#fff"/>
+          </Button>
+
+          <Button>
+            Learn React
+            <Ripple duration={1000} color="#fff"/>
+          </Button>
+
+          <Button>
+            Learn React
+            <Ripple duration={2000} color="black"/>
+          </Button>
       </header>
     </div>
   );
